@@ -1,8 +1,8 @@
 sdcshield openEuler-24.03LTS
-git: 6533993
+git: 050b655
 built: 2026-09-02
 series: 24.03  sp: LTS
 cpp_std: gnu++23  macro: none
 image: ghcr.io/wangxumarshall/sdcshield-offline:24.03-LTS
-binary-sha256: 7654b2a004fe54890bc82f0a00cb9c59e1fe4d06b454780a99d5ebe1f5638aa0
-build-hash: 14d3e3db70b4570883989637aaf9476fc67c83a051261e89ec0bcb19f691e395
+binary-sha256: 7d995bb529ee3b9076b749689e8e3252317c0222388e87026c65ce1c1fbbae04
+build-hash: c44400cfc3e870a43e9aacf5d089b263311a61f18eaf903d63aeabca9195fd46
