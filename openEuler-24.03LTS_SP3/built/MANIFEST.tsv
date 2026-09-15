@@ -1,7 +1,7 @@
 # MANIFEST.tsv — openEuler-24.03LTS_SP3 产物校验清单
 file	sha256	size	source
 sdcshield	59bc68e0f5f6086a46d83bfc44f5d3a0c4909ccda040332a6e1be2321a644425	2833864	built
-run-sdcshield.sh	f93a473285515599867dad2fd4a1ad4393eba13aebf95a23170873204e4c4e4f	502	built
+run-sdcshield.sh	9005468afa2badd49c86d750d2942dddf2816fc5e69be24671312c566d616022	1948	built
 libs/libarm_compute_graph.so	b4313be8a8cbb0e63c52520a24cf7bfd6fcb6dbd2a72c0630231cd66ae701862	1050768	bundled
 libs/libarm_compute.so	6621141aeefb7123ebf2dd9c32594b5a77f067ddb8c25b2ab2d0f0ce4dd4a8d0	22484760	bundled
 libs/libatomic.so.1	6236386826e78b3528505d9797e62aef277060e2e99874d19aa4263f17b442ba	67488	bundled
