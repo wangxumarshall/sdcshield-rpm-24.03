@@ -4,6 +4,8 @@
 #
 # 用法:
 #   ./run-sdcshield.sh [sdcshield 参数...]     原样透传给二进制
+#   ./run-sdcshield.sh detect [参数...]       SDC 敏感优先序一键检测
+#     （生成优先序测试列表后全核轮转，-F 检出即停；详见 sdc_detect.sh）
 #   ./run-sdcshield.sh full [参数...]          全核满载 eigen 运算:
 #     第一段: 11 个稳定 eigen 测试, 不带 -n (默认全部 CPU 满载)
 #     第二段: 4 个数值敏感测试 (eigen_svd_double/eigen_sparse/
@@ -15,6 +17,12 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 export LD_LIBRARY_PATH="$SCRIPT_DIR/libs${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
 # 20.03 的二进制 RPATH 指向 /opt/openEuler/gcc-toolset-10/root/usr/lib64;
 # 若目标机没装 toolset, 上面的 libs/ 提供了同名库, LD_LIBRARY_PATH 优先于 RPATH。
+
+if [ "$1" = "detect" ]; then
+    shift
+    # SDC 敏感优先序一键检测（详见随包 sdc_detect.sh 头注释）
+    SDC_BIN="$SCRIPT_DIR/sdcshield" exec "$SCRIPT_DIR/sdc_detect.sh" "$@"
+fi
 
 if [ "$1" = "full" ]; then
     shift
